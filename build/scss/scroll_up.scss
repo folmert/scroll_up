@@ -1,0 +1,65 @@
+$color:darken(rgb(119, 158, 223),20%);
+
+.triangle {
+	content:"";
+	width:0;
+	height:0;
+	border-style:solid;
+	-moz-transform:scale(.9999);
+
+
+} 
+
+@mixin triangleUp($color,$width,$height)
+{
+	@extend .triangle;
+	border-width:0 $width/2 $height $width/2;
+	border-color:transparent transparent $color transparent;
+}
+
+
+.scroll_up {
+
+	display:none;
+	width:50px;
+	height:50px;
+	border-radius:50px;
+
+	position:fixed;
+	bottom:70px;
+	right:50px;
+	cursor:pointer;
+	text-align:center;
+	z-index:9999;
+
+	opacity:0.6;
+
+	&:hover {
+		opacity:0.9;
+	}
+
+	background-color:$color;
+	text-align:center;
+	padding-top:13px;
+
+
+	&:after {
+		display:inline-block;
+		@include triangleUp(white,25px,25px);
+		z-index:1;
+	}
+
+	&:before {
+		display:inline-block;
+		@include triangleUp($color,25px,15px);
+		position:absolute;
+		top:23px;
+		width: 1px;
+		left:0;
+		right:0;
+		margin:0 auto;
+		z-index:2;
+	}
+
+}
+
