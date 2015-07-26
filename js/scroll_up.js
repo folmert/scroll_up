@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var scroll_up_btn = document.createElement('div');
 scroll_up_btn.classList.add('scroll_up');
@@ -16,9 +16,9 @@ window.addEventListener('scroll', function() {
 });
 
 
-scroll_up_btn.addEventListener('click', function(e) {
+scroll_up_btn.addEventListener('click', function() {
 	
-	// jQuery("html, body").animate({
+	// jQuery('html, body').animate({
 		// 	scrollTop: 0
 		// }, {
 			// 	easing: 'swing',
