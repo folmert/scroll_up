@@ -1,5 +1,6 @@
 'use strict';
-
+querySelectorAll = document.querySelectorAll.bind(document);
+	
 var scroll_up_btn = document.createElement('div');
 scroll_up_btn.classList.add('scroll_up');
 document.body.appendChild(scroll_up_btn);
